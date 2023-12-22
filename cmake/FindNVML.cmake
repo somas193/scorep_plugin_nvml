@@ -29,7 +29,7 @@ if("${CMAKE_SIZEOF_VOID_P}" EQUAL "8") # 64bit
 else() # assume 32bit
     file(GLOB nvml_lib_path_hint /app/env/lib/stubs/ /usr/lib32/nvidia*/ /usr/lib/nvidia*/ /usr/local/cuda*/targets/*/lib/stubs/)
 endif()
-find_library(NVML_LIBRARIES NAMES libnvidia-ml.so nvidia-ml
+find_library(NVML_LIBRARIES NAMES libnvidia-ml nvidia-ml
         PATHS ${nvml_lib_path_hint})
 
 # Version
